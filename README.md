@@ -61,5 +61,11 @@ docker run -p 5000:5000 scraper-flask-app
 ```
 http://localhost:5000
 ```
+```json
+{
+  "heading": "Example Domain",
+  "title": "Example Domain"
+}
+```
 ![Screenshot 2025-04-20 103809](https://github.com/user-attachments/assets/8477313a-26d8-4146-a7a1-bc2d7bb2e79b)
 
