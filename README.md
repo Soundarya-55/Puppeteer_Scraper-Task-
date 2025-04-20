@@ -1,4 +1,4 @@
-# Puppeteer_Scraper-Task
+# Puppeteer_Scraper_Task
 
 This project is a simple full-stack web scraper using Node.js + Puppeteer for scraping and Python Flask to serve the scraped content via an API.
 
@@ -40,7 +40,7 @@ When Docker or any developer sets up the project, Python reads this file and ins
 ```
 flask==2.3.2
 ```
-### Step 3: Create the Multi-Stage Dockerfile
+### 🐳 Step 3: Create the Multi-Stage Dockerfile
 We use a multi-stage Docker build to keep the final image lightweight and clean.
 **Multi-Stage?**
 1. Keeps the final image small and clean (no Node.js in the final image)
