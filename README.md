@@ -23,7 +23,7 @@ puppeteer-flask-scraper/
 2. Run the scraper script with npm start, which is easier than typing node scrape.js each time.
 3. Maintain and manage dependencies (like Puppeteer) in a structured way.
 
-## The scrape.js allows:
+### The scrape.js allows:
 **1. Automates Data Collection:** Puppeteer interacts with websites in a browser-like environment, simulating a real user browsing. It can extract data from websites that may require JavaScript to render the content.
 **2. Flexibility:** By passing a URL as an environment variable or command-line argument, you can scrape any site without modifying the code each time.
 **3. Efficiency:** This script runs in a headless browser, meaning it doesn't open a visible window and runs faster than using a full browser, which is ideal for automated scraping.
@@ -40,24 +40,24 @@ When Docker or any developer sets up the project, Python reads this file and ins
 ```
 flask==2.3.2
 ```
-### 🐳 Step 3: Create the Multi-Stage Dockerfile
+## 🐳 Step 3: Create the Multi-Stage Dockerfile
 We use a multi-stage Docker build to keep the final image lightweight and clean.
 **Multi-Stage?**
 1. Keeps the final image small and clean (no Node.js in the final image)
 2. Allows you to scrape once during build and serve using Flask in runtime
 3. Better security and separation of concerns
 
-### Step 4: Build the Docker Image
+## Step 4: Build the Docker Image
 ```
 docker build --build-arg SCRAPE_URL=https://example.com -t scraper-flask-app .
 ```
-### Step 5: Run the Container
+## Step 5: Run the Container
 ```
 docker run -p 5000:5000 scraper-flask-app
 ```
 ![Screenshot 2025-04-20 103848](https://github.com/user-attachments/assets/e1ddfdd7-70c9-4ba4-a35d-43a6aa70f89c)
 
-### Step 6: Access Output
+## Step 6: Access Output
 ```
 http://localhost:5000
 ```
